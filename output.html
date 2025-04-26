@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000; /* Optional: Add background color for better contrast */
+    color: #fff; /* Optional: Add text color for better contrast */
+  }
+  .container {
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  pre {
+    white-space: pre-wrap; /* Allows wrapping on mobile */
+    word-break: break-all; /* Ensures no overflow issues */
+    font-size: 3vw; /* Adjust font size based on viewport width */
+    line-height: 1.2; /* Adjust line height to match font size */
+  }
+  @media (min-width: 600px) {
+    pre {
+      font-size: 1.5vw; /* Adjust font size for larger screens */
+    }
+  }
+  @media (min-width: 900px) {
+    pre {
+      font-size: 1vw; /* Further adjust font size for larger screens */
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<pre>

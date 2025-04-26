@@ -1,7 +1,26 @@
 from numpy import array
 from PIL import Image
 from qrcode import QRCode, constants
-
+def import_txt_to_list(file_path):
+    """
+    Imports a text file and converts each row into an item in a list.
+    
+    Args:
+    file_path (str): The path to the text file.
+    
+    Returns:
+    list: A list where each item is a row from the text file.
+    """
+    try:
+        with open(file_path, 'r') as file:
+            lines = file.readlines()
+            # Remove newline characters from each line
+            lines = [line.strip() for line in lines]
+        return lines
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        return []
+    
 def generateasciiQR(data, invert=False, white='██', black='  ', version=1, border=1, correction='M'):
     # Parse error correction
     if correction == 'L':

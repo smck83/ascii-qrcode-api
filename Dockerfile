@@ -6,7 +6,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-ins
     ntp python3 pip curl \
     && mkdir -p ${MY_APP_PATH}/data
 
-ADD main.py convert.py requirements.txt run.py ${MY_APP_PATH}
+ADD output.html main.py convert.py requirements.txt run.py ${MY_APP_PATH}
 RUN pip install -r ${MY_APP_PATH}/requirements.txt
 WORKDIR ${MY_APP_PATH}
 
